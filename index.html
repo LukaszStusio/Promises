@@ -20,32 +20,40 @@
   <body>
     <header class="box-header ">
       <h1>
-        Promise Land
+        The promise land
       </h1>
       <p>
         <strong>Video #67</strong>
       </p>
     </header>
-    <main class="grid vertical-padding">
+    <main class="grid vertical-borders">
+      <section class="box flex">
+        <p style="white-space:pre-line;">
+          "All the &NewLine;promises &NewLine;we made"
+        </p>
+        <p style=" text-align: right; white-space:pre-line;">
+          "Why can't you &NewLine;stay here &NewLine;awhile"
+        </p>
+      </section>
       <section class="box">
-        <h2>Making a pizza - excercise</h2>
+        <h2>Making a pizza excercise</h2>
         <p>
-          You can't make a pizza instantly. You have to bake it, put toppings, etc. <strong>That takes time</strong>.
+          You can't make a pizza instantly. You have to bake it, put toppings, etc. <span class="fat">That takes time</span>.
         </p>
         <p>
           When you order a pizza you get an order-ticket. You can't eat it - it's just a <strong>promise</strong> that they do it for you.
         </p>
         <p>
-          See console logs of course.
+          Check console logs of course.
         </p>
       </section>
       <section class="box">
         <h2>
-          Contents:
+          Excercise features
         </h2>
         <ul class="li-square">
           <li>
-            Chaining with <code class="code marked">.then()</code>
+            Chaining with <code class="code marked fat">.then()</code>
           </li>
           <li>
             Running functions sequentially vs concurrently
@@ -54,27 +62,57 @@
             MEGA Promise - a static method that takes an array of promises as argument
           </li>
           <li>
-            <span class="marked">Promise.race()</span>
+            <span class="marked fat">Promise.race()</span> - waits for the first element in the array.
           </li>
         </ul>
       </section>
-      <section class="box same-as-background">
-        <p style="white-space:pre-line;">
-          "All the &NewLine;promises &NewLine;we made"
-        </p>
-        <p style="white-space:pre-line;">
-          "Why can't you &NewLine;stay here &NewLine;awhile"
+      <section class="box flex">
+        <div>
+        <h2>
+          Reject() handling
+        </h2>
+          <p>
+            Reject a <span class="green fat">makePizza()</span> function if people try to put a pineapple in it.
+          </p>
+          <ul class="li-square">
+            <li>
+              <span class="marked fat">catch()</span> - handles errors from  <span class="green fat">reject()</span>.
+            </li>
+            <li>
+              It stops the chain of <span class="green fat">.then()</span> if evoked, so the rest of it can't run even it's correct.
+            </li>
+            <li>
+              <span class="marked fat">Promise.allSettled()</span> doesn't brake the chain.
+            </li>
+          </ul>
+        </div>
+        <figure >
+          <img class="shaking" height="200px" src="img/pineapple.png" alt="pineapple" title="Do not put a pineapple on pizzas!">
+        </figure>
+      </section>
+      <section class="box">
+        <p>Promise.allSettled()</p>
+        <p>Promise.race()</p>
+        <p>Promise.all()</p>
+        <p>resolve()</p>
+        <p>reject()</p>
+        <p>catch()</p>
+        <p>then()</p>
+      </section>
+      <section class="box">
+        <h2>
+          Summary
+        </h2>
+        <p>
+          Javascript is hard but I'm trying.
         </p>
       </section>
     </main>
-    <footer class="footer grid">
-      <section></section>
-      <section></section>
-      <section>
-        <p class="fat">nightcoding.<span class="marked strike">life</span></p>
-      </section>
+    <footer>
+        <p class="fat">
+          nightcoding.<span class="marked strike">life</span>
+        </p>
     </footer>
-    <!-- JS -->
     <script src="promises.js"></script>
   </body>
 </html>

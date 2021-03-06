@@ -12,6 +12,7 @@ html {
   -ms-overflow-style: none;
   font-family: "Inconsolata", monospace;
   box-sizing: border-box;
+
 }
 
 html::-webkit-scrollbar {
@@ -19,7 +20,6 @@ html::-webkit-scrollbar {
 }
 
 /* layout */
-
 .flex {
   display: flex;
 }
@@ -33,10 +33,13 @@ html::-webkit-scrollbar {
 /* general components */
 
 body {
-  background: var(--background-color);
   background: var(--background);
   border: 5px solid var(--color-0);
   letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.5;
 }
 
 .box-header {
@@ -48,6 +51,7 @@ body {
 .box {
   padding: 1rem;
   min-height: 300px;
+  background: var(--background-color);
 }
 
 .code {
@@ -56,21 +60,24 @@ body {
 /* styling */
 
 .box:nth-of-type(1) {
-    /* background: var(--color-0) url(img/noise-2.gif); */
-    background: var(--background-color);
-  }
-
-.box:nth-of-type(2) {
-  background: var(--background-color);
-}
-.box:nth-of-type(3) {
-  background: var(--color-0) url(img/all-the-promises-we-made.jpg);
-  background-repeat: round;
+  background: var(--color-0) url(img/promises.jpg) no-repeat center;
+  background-size: cover;
   color: #fcfce393;
+  justify-content: space-between;
+}
+
+.box:nth-of-type(5) {
+  background: var(--color-0) url(img/reject.jpg) no-repeat center;
+  background-size: cover;
+  color: #fcfce393;
+  justify-content: space-between;
 }
 
 .same-as-background {
   color: var(--background-color);
+}
+.green {
+  color: var(--color-3);
 }
 
 .header-color {
@@ -82,8 +89,7 @@ body {
   line-height: 1.5;
 }
 
-.vertical-padding {
-  /* padding: 2px; */
+.vertical-borders {
   background: var(--color-0);
 }
 
@@ -91,10 +97,49 @@ body {
   font-weight: 700;
 }
 
+.shaking {
+  animation: shake 20s infinite linear;
+}
+
+@keyframes shake {
+  0% {
+    transform:  rotate(15deg);
+  }
+  10% {
+    transform:  rotate(-15deg);
+  }
+  20% {
+    transform:  rotate(15deg);
+  }
+  30% {
+    transform:  rotate(-15deg);
+  }
+  40% {
+    transform:  rotate(15deg);
+  }
+  50% {
+    transform:  rotate(-15deg);
+  }
+  60% {
+    transform:  rotate(15deg);
+  }
+  70% {
+    transform:  rotate(-15deg);
+  }
+  80% {
+    transform:  rotate(15deg);
+  }
+  90% {
+    transform:  rotate(-15deg);
+  }
+  100% {
+    transform:  rotate(15deg);
+  }
+}
 
 /* footer */
 
-.footer {
+footer {
   text-align: center;
   border-top: 5px solid var(--color-0);
   background: var(--color-3);
