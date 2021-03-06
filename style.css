@@ -12,7 +12,7 @@ html {
   -ms-overflow-style: none;
   font-family: "Inconsolata", monospace;
   box-sizing: border-box;
-
+  padding: 1rem;
 }
 
 html::-webkit-scrollbar {
@@ -28,6 +28,7 @@ html::-webkit-scrollbar {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: minmax(400px, auto);
 }
 
 /* general components */
@@ -36,6 +37,8 @@ body {
   background: var(--background);
   border: 5px solid var(--color-0);
   letter-spacing: 2px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 p {
@@ -62,14 +65,29 @@ p {
 .box:nth-of-type(1) {
   background: var(--color-0) url(img/promises.jpg) no-repeat center;
   background-size: cover;
-  color: #fcfce393;
+  /* color: #fcfce3a6; */
+}
+
+.box:nth-of-type(1)
+ > p {
+   /* align-self: flex-end; */
+   color: #fcfce3a6;
+}
+
+.box:nth-of-type(3) {
+  background: var(--color-0) url(img/laugh.jpg) no-repeat center;
+  background-size: cover;
+  color: #fcfce3a6;
+  mix-blend-mode: difference;
+
   justify-content: space-between;
 }
 
 .box:nth-of-type(5) {
   background: var(--color-0) url(img/reject.jpg) no-repeat center;
   background-size: cover;
-  color: #fcfce393;
+  color: #fcfce3a6;
+  mix-blend-mode: difference;
   justify-content: space-between;
 }
 
