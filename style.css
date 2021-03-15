@@ -52,7 +52,6 @@ body {
   }
 }
 
-
 p {
   line-height: 1.5;
 }
@@ -82,7 +81,7 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #fcfce3a6;
+  color: var(--background-color);
 }
 
 .box:nth-of-type(3) {
@@ -91,7 +90,7 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #fcfce3a6;
+  color: var(--background-color);
   justify-content: space-between;
 }
 
@@ -101,13 +100,10 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #fcfce3a6;
+  color: var(--background-color);
   justify-content: space-between;
 }
 
-.same-as-background {
-  color: var(--background-color);
-}
 .green {
   color: var(--color-3);
 }
@@ -119,6 +115,13 @@ p {
 .li-square {
   list-style-type: square;
   line-height: 1.5;
+}
+
+.li-no-style {
+  list-style-type: none;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
 }
 
 .vertical-borders {
@@ -160,11 +163,10 @@ p {
 /* footer */
 
 footer {
+  padding: 0.5rem;
   text-align: center;
   border-top: 5px solid var(--color-0);
   background: var(--color-3);
-  padding: 0.5rem;
-  grid-column: 1 / -1;
 }
 
 .strike {
